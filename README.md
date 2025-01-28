@@ -72,7 +72,7 @@ FSLoRA/
   - `run_main.sh`: Execute FSLoRA algorithm and evaluate the checkpoints
 
 ## Dataset
-For the commonsense reasoning benchmark, data can be found [Commonsense Reasoning Benchmark Dataset](https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main/dataset)
+For the commonsense reasoning benchmark, data can be found at [Commonsense Reasoning Benchmark Dataset](https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main/dataset)
 
 ## 🏃‍♂ Run Code
 
