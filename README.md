@@ -57,7 +57,7 @@ FSLoRA/
 
 - **`Commensen_reasoning/`**: Contains the primary codebase for the LLaMA-3.2-3B for Commensense Reasoning task.
   - `LoRA_sketching_llama_het.py`: Our FSLoRA framework for LLaMA-3.2-3B.
-  - `models.py`: Includes building model`.
+  - `models.py`: Includes building model.
   - `evaluation_par.py`: For evaluation.
   - `run_main.sh`: execute FSLoRA algorithm and evaluate the checkpoints
 
