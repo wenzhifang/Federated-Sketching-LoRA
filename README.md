@@ -64,8 +64,3 @@ Run the framework with the following command:
 ```bash
 python main/main.py
 ```
-
-
-## 🙏 Acknowledgement
-
-The images in the M4A1 dataset are derived from the [ActionSense](https://action-sense.csail.mit.edu/) dataset.
