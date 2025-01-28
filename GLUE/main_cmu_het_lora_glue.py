@@ -39,10 +39,6 @@ models.add_adapters_dataset(args.dataset, model, lora_rank=r, lora_alpha=alpha)
 trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
 print(f"Training {trainable} parameters ({100*trainable/total:.2f}% of original {total})")
 
-##########################
-k_list = [r]*args.clients
-##########################
-
 fl_cmu_lora_train_glue_het(args.dataset, model, fronzen_model, clients, testloader, test_batch,
     rounds=args.server_rounds,
     eval_freq=args.eval_freq,
