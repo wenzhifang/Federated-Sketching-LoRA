@@ -93,4 +93,3 @@ def add_adapters(model, lora_rank, lora_alpha, output_layer_name, target_modules
                 p.requires_grad = True
             else:
                 p.requires_grad = False
-    # if lora_rank == -1: full fine-tune
