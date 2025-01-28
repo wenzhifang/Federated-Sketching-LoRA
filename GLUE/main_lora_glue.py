@@ -29,12 +29,3 @@ fl_lora_train_glue(args.dataset, model, clients, testloader, test_batch,
     client_epochs=args.client_epochs,
     r = r
 )
-'''
-python main_lora_glue.py --dataset 'mnli' --gpu "0" 
-python main_lora_glue.py --dataset 'mrpc' --gpu "1"
-python main_lora_glue.py --dataset 'cola' --gpu "2"
-python main_lora_glue.py --dataset 'sst2' --gpu "0" --lora_r 2
-python main_lora_glue.py --dataset 'qnli' --gpu "1" --lora_r 2
-python main_lora_glue.py --dataset 'rte' --gpu "2"
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
-'''
