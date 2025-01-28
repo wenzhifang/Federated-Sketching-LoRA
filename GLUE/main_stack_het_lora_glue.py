@@ -17,7 +17,6 @@ alpha = args.lora_alpha
 random_numbers = [random.random() for _ in range(args.clients)]
 
 sketch_list = [0.125, 0.25, 0.5]
-#sketch_list = [1]*3
 k_list=[]
 
 for i in range(args.clients):
@@ -38,10 +37,6 @@ fronzen_model = deepcopy(model)
 total = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 print(f"(Parameters: {total})")
-
-##########################
-k_list = [r]*args.clients
-##########################
 
 fl_stack_lora_train_glue_het(args.dataset, fronzen_model, clients, testloader, test_batch,
     rounds=args.server_rounds,
