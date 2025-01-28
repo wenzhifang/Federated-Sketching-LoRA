@@ -10,7 +10,7 @@ ICML Submission 2308
 
 ## 🔥 Our Framework
 
-We present **Federated Sketching LoRA** (FSLoRA), a novel methodology that retains LoRA's scalability while adapting to the communication and computational capabilities of individual devices.
+TL, DR: In this repo, we provide the implementation of **Federated Sketching LoRA** (FSLoRA), a novel methodology for collaborative LLM fine-tuning across resource-heterogeneous devices
 
 <div align="center">
     <img src="figures/Overview.png" alt="overview" style="width:60%;"/>
