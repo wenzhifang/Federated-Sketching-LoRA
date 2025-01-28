@@ -3,9 +3,9 @@ import argparse
 def parse():
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu',    default="0,1",     type=str)
-    parser.add_argument('--base-model',    default='meta-llama/Llama-3.2-3B-Instruct',  type=str) # 'meta-llama/Llama-2-7b-hf'; 'meta-llama/Llama-3.2-1B' meta-llama/Llama-3.2-3B-Instruct microsoft/Phi-3.5-mini-instruct google/gemma-2-2b-it
-    parser.add_argument('--dataset',    default='boolq',  type=str) # used for evaluation
-    parser.add_argument('--clients',    default=10,       type=int) #
+    parser.add_argument('--base-model',    default='meta-llama/Llama-3.2-3B-Instruct',  type=str) # 'meta-llama/Llama-2-7b-hf'; 'meta-llama/Llama-3.2-1B' meta-llama/Llama-3.2-3B-Instruct google/gemma-2-2b-it
+    parser.add_argument('--dataset',    default='boolq',  type=str)
+    parser.add_argument('--clients',    default=10,       type=int)
     parser.add_argument('--server-opt',       default='adam',  type=str)
     parser.add_argument('--server-lr',        default=3e-4,    type=float) #3e-4
     parser.add_argument('--client-lr',        default=3e-4,    type=float) #5e-4
@@ -18,7 +18,4 @@ def parse():
     parser.add_argument('--sketching_ratio',     default=1,      type=float)
     parser.add_argument('--eval-freq',  default=5,         type=int) #10
     parser.add_argument('--algorithm',       default='slora',  type=str)
-    parser.add_argument('--compression_ratio',     default=1,      type=float)
-
-
     return parser.parse_args()
