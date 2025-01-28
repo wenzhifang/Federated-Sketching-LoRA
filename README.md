@@ -37,7 +37,7 @@ datasets == 3.2.0
 
 ## 🗂️ Folder Structure
 ```
-LCIO/
+FSLoRA/
 │   README.md
 │   requirements.txt
 │
