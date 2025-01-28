@@ -1,6 +1,7 @@
-einops==0.7.0
-labml-helpers==0.4.89
-labml-nn==0.4.136
-numpy==1.23.5
-torch==2.2.2
-torchvision==0.17.2
+python == 3.10.14
+torch == 2.5.1
+transformers == 4.47.1
+peft == 0.14.0
+accelerate == 1.2.1
+bitsandbytes == 0.45.0
+datasets == 3.2.0
