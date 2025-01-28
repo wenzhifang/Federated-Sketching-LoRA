@@ -4,9 +4,7 @@ from arg import parse, parse_stack
 import data_utils
 import models
 from heterogeneous_LoRA_stack_glue import fl_stack_lora_train_glue_het
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
-#args = parse()
-args = parse_stack()
+args = parse()
 
 clients, valloader, testloader, test_batch = data_utils.build_dataset(
     args.dataset, args.client_batch, args.clients, args.iid_alpha, args.seed, args.eval_frac)
