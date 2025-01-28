@@ -54,8 +54,4 @@ fl_stack_lora_train_glue_het(args.dataset, fronzen_model, clients, testloader, t
     r = r,
     m_list = k_list
 )
-'''
-python main_stack_het_lora_glue.py --lora_r 64 --dataset 'mrpc' --gpu "0" --lora-alpha 1
 
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
-'''
