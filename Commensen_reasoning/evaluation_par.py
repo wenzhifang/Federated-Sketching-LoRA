@@ -29,8 +29,6 @@ def evaluate_mini_batch(model,
         #### for safe 
         input_ids = input_ids.to(accelerator.device)
         attention_mask = attention_mask.to(accelerator.device)
-        # delete at Jan 23
-
     
         generation_config = GenerationConfig(
             #do_sample=True, #### delete
@@ -99,13 +97,9 @@ if __name__ == '__main__':
     args = parse()
     base_seed = 42
     torch.manual_seed(base_seed)
-    #pbar = tqdm(range(14, -1, -1), desc=f'{args.dataset}')
-    #for rnd in pbar:
-    L = [14]
-    for rnd in L:
-        save_model_path = f"/scratch/gilbreth/fang375/model_prameters_set/{args.algorithm}/commensense/{rnd}"
-        # /scratch/gilbreth/fang375/parameters/slora
-        #save_model_path = f"./model_prameters_set/{args.algorithm}/commensense/{rnd}"
+    pbar = tqdm(range(14, -1, -1), desc=f'{args.dataset}')
+    for rnd in pbar:
+        save_model_path = '...'
         model = models.build_model(args.base_model)
         peft_model = PeftModel.from_pretrained(model, save_model_path)
         evaluate(peft_model, args, rnd) 
