@@ -4,7 +4,6 @@ from arg import parse
 import data_utils
 import models
 from heterogeneous_LoRA_CMU_glue import fl_cmu_lora_train_glue_het
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
 args = parse()
 
 clients, valloader, testloader, test_batch = data_utils.build_dataset(
@@ -55,8 +54,3 @@ fl_cmu_lora_train_glue_het(args.dataset, model, fronzen_model, clients, testload
     r = r,
     m_list = k_list
 )
-'''
-python main_cmu_het_lora_glue.py --lora_r 64 --dataset 'cola' --gpu "0"
-
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
-'''
