@@ -6,8 +6,7 @@ import torch
 from utils_data import *
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from huggingface_hub import login
-login("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")
-#login("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")
+login("...")
 
 from accelerate import Accelerator
 
@@ -53,5 +52,3 @@ fl_slora_train_llama_het(peft_model, client_dataloaders,
     accelerator = accelerator,
     base_seed = base_seed
 )
-
-# mv /depot/cgb/data/fang375/Llama_Sketching_LoRA_Par/model_prameters_set/slora_r64_ratio_1000/ /scratch/gilbreth/fang375/backup_adapters/
