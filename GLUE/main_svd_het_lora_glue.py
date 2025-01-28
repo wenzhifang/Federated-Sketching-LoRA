@@ -4,7 +4,6 @@ from arg import parse
 import data_utils
 import models
 from heterogeneous_LoRA_SVD_glue import fl_svd_lora_train_glue_het
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
 args = parse()
 
 clients, valloader, testloader, test_batch = data_utils.build_dataset(
