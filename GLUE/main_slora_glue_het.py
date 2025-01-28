@@ -49,8 +49,3 @@ fl_slora_train_glue_het(args.dataset, model, clients, testloader, test_batch,
     r = r,
     m_list = k_list
 )
-'''
-python main_slora_glue_het.py --lora_r 64 --dataset 'qnli' --gpu "1"
-
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
-'''
