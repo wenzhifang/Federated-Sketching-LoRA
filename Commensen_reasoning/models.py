@@ -1,10 +1,10 @@
 import torch
-from peft import (  # noqa: E402
+from peft import (
     LoraConfig,
     PeftModel,
     prepare_model_for_kbit_training
 )
-from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, AutoModel  # noqa: F402
+from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, AutoModel
 from transformers import BitsAndBytesConfig
 from utils_data import *
 
@@ -20,7 +20,7 @@ def build_model(base_model):
             torch_dtype=torch.float16,
             use_auth_token = True, 
             quantization_config=config,
-            cache_dir="/scratch/gilbreth/fang375" #/depot/cgb/data/fang375
+            cache_dir="..." # model saving path
         )
     model = prepare_model_for_kbit_training(model)
     return model
