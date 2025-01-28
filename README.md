@@ -62,6 +62,6 @@ FSLoRA/
 
 Run our framework with the following command:
 ```bash
-python main/main.py
+python main/run_main.sh
 ```
 This code runs with 4 NVIDIA A100 GPUs in parallel, using the Accelerate library for efficient multi-GPU support.
