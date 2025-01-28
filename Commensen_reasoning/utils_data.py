@@ -50,7 +50,6 @@ def generate_and_tokenize_prompt(data_point, train_on_inputs=True):
     return tokenized_full_prompt
 
 def generate_prompt(data_point):
-    # sorry about the formatting disaster gotta move fast
     if data_point["input"]:
         return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request. 
 
@@ -123,26 +122,9 @@ def collate_fn_left(batch):
         "attention_mask": attention_mask_padded,
         "labels": labels_padded
     }
-''' 
-def build_datasets(n_clients, batch_size):
-    data = load_dataset("json", data_files="/depot/cgb/data/fang375/Llama_Sketching_LoRA/dataset/commonsense_170k.json")
-    train_val = data["train"].train_test_split(
-            test_size=2000, shuffle=True, seed=42
-        )
-    trainset = (
-        train_val["train"].map(generate_and_tokenize_prompt)
-    )
-
-    clients = [
-        DataLoader(trainset.shard(num_shards=n_clients, index=i), batch_size = batch_size, shuffle=True, num_workers=4, collate_fn=collate_fn_left, pin_memory=True)
-        for i in range(n_clients)
-    ]
-    return clients
-'''
 
 def build_datasets(args, base_seed):
     file_path = f'./dataset/{args.dataset}/train.json'
-    #file_path = f'/depot/cgb/data/fang375/Llama_Sketching_LoRA/dataset/commonsense_170k.json'
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"can not find dataset file : {file_path}")
     dataset = load_dataset("json", data_files=file_path)["train"]
@@ -216,7 +198,6 @@ def generate_prompt_eval(instruction):
             {instruction}
 
             ### Response:
-            """  # noqa: E501
 
 # def generate_tokenizers_eval(instructions):
 #     prompts = [generate_prompt_eval(instruction) for instruction in instructions]
