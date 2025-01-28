@@ -43,9 +43,7 @@ FSLoRA/
 │
 ├─── GLUE/
 │   │   arg.py
-│   │   LoRA_glue.py
 │   │   main_slora_glue_het.py
-│   │   main_stack_het_lora_glue.py
 │   │   models.py
 │   │   data_utils.py
 │   │   train_utils.py
@@ -61,16 +59,17 @@ FSLoRA/
 │   │   main.py
 │   │   run_main.sh
 ```
-- **`GLUE/`**: Contains the primary codebase for RoBERTa for the GLUE task.
-  - `main_stack_het_lora_glue.py`: Our FSLoRA framework for RoBERTa.
+- **`GLUE/`**: Contains the primary codebase for RoBERTa on the GLUE benchmark.
+  - `main_slora_glue_het.py`: Our FSLoRA framework for GLUE.
   - `models.py`: Includes building model.
-  - `run_main.sh`: execute FSLoRA algorithm and evaluate the checkpoints.
+  - `utils_data.py`: Data preprocessing.
+  - `run_main.sh`: Passing args and call main_slora_glue_het.py.
 
-- **`Commensen_reasoning/`**: Contains the primary codebase for LLaMA-3.2-3B for the Commensense Reasoning task.
+- **`Commensen_reasoning/`**: Contains the primary codebase for LLaMA-3.2-3B on the Commensense Reasoning benchmark.
   - `LoRA_sketching_llama_het.py`: Our FSLoRA framework for LLaMA-3.2-3B.
   - `models.py`: Includes building model.
   - `evaluation_par.py`: For evaluation.
-  - `run_main.sh`: execute FSLoRA algorithm and evaluate the checkpoints
+  - `run_main.sh`: Execute FSLoRA algorithm and evaluate the checkpoints
 
 
 ## 🏃‍♂ Run Code
