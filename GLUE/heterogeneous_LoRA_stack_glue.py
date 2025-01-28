@@ -7,8 +7,7 @@ from arg import parse, parse_stack
 from data_utils import *
 from train_utils import *
 
-#args = parse()
-args = parse_stack()
+args = parse()
 
 random.seed(args.seed)
 np.random.seed(args.seed)
