@@ -16,7 +16,6 @@ alpha = args.lora_alpha
 random_numbers = [random.random() for _ in range(args.clients)]
 
 sketch_list = [0.125, 0.25, 0.5]
-#sketch_list = [1]*3
 k_list=[]
 
 for i in range(args.clients):
@@ -40,11 +39,6 @@ models.add_adapters_dataset(args.dataset, model, lora_rank=r, lora_alpha=alpha)
 trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
 print(f"Training {trainable} parameters ({100*trainable/total:.2f}% of original {total})")
 
-##########################
-k_list = [r]*args.clients
-##########################
-
-
 fl_svd_lora_train_glue_het(args.dataset, model, fronzen_model, clients, testloader, test_batch,
     rounds=args.server_rounds,
     eval_freq=args.eval_freq,
@@ -56,8 +50,3 @@ fl_svd_lora_train_glue_het(args.dataset, model, fronzen_model, clients, testload
     r = r,
     m_list = k_list
 )
-'''
-python main_svd_het_lora_glue.py --lora_r 64 --dataset 'mrpc' --gpu "0" --lora-alpha 1
-
-#['sst2', 'mnli', 'mrpc', 'cola', 'qqp', 'qnli', 'rte', 'stsb']
-'''
