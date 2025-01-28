@@ -63,7 +63,7 @@ FSLoRA/
   - `main_slora_glue_het.py`: Our FSLoRA framework for GLUE.
   - `models.py`: Includes building model.
   - `utils_data.py`: Data preprocessing.
-  - `run_main.sh`: Passing args and call main_slora_glue_het.py.
+  - `run_main.sh`: Passing args and call `main_slora_glue_het.py`.
 
 - **`Commensen_reasoning/`**: Contains the primary codebase for LLaMA-3.2-3B on the Commensense Reasoning benchmark.
   - `LoRA_sketching_llama_het.py`: Our FSLoRA framework for LLaMA-3.2-3B.
