@@ -146,7 +146,6 @@ def fl_slora_train_llama_het(server_model, client_dataloaders, server_opt, serve
             accelerator.wait_for_everyone()
 
         if accelerator.is_main_process: 
-            #save_path = f"./model_prameters_set/{args.algorithm}/{args.dataset}/{ep}"
-            save_path = f"/scratch/gilbreth/fang375/model_prameters_set/{args.algorithm}/{args.dataset}/{ep}"
-            os.makedirs(save_path, exist_ok=True)  # Safe directory creation
+            save_path = "..."
+            os.makedirs(save_path, exist_ok=True)
             server_model.save_pretrained(save_path)
