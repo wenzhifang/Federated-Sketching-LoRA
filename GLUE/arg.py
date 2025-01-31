@@ -5,7 +5,7 @@ def parse():
     parser.add_argument('--gpu',    default="0",     type=str)
     parser.add_argument('--dataset',    default='20newsgroups',  type=str)
     parser.add_argument('--iid-alpha',  default=0.1,  type=float)
-    parser.add_argument('--clients',    default=10,       type=int) #
+    parser.add_argument('--clients',    default=10,       type=int) #50, 20
     parser.add_argument('--seed',       default=0,          type=int)
     parser.add_argument('--eval-freq',  default=5,         type=int) #1 for stack 5 for others
     parser.add_argument('--eval-frac',  default=1,        type=float)
