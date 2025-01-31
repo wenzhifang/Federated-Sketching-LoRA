@@ -10,7 +10,7 @@ def parse():
     parser.add_argument('--eval-freq',  default=5,         type=int) #1 for stack 5 for others
     parser.add_argument('--eval-frac',  default=1,        type=float)
     #
-    parser.add_argument('--server-opt',       default='adam',  type=str)
+    parser.add_argument('--server-opt',       default='adam',  type=str) #SGD
     parser.add_argument('--server-lr',        default=5e-4,    type=float)
     parser.add_argument('--server-batch',     default=10,       type=int) #
     parser.add_argument('--server-rounds',    default=200,      type=int) # 10 for stack 200 for others
