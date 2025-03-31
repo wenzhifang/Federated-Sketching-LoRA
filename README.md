@@ -27,12 +27,13 @@ pip install -r requirements.txt
 Alternatively, ensure the following dependencies are installed:
 ```plaintext
 python == 3.10.14
-torch == 2.5.1
-transformers == 4.47.1
+torch == 2.6.0
+transformers == 4.50.1
 peft == 0.14.0
 accelerate == 1.2.1
 bitsandbytes == 0.45.0
 datasets == 3.2.0
+vllm == 0.8.2
 ```
 
 ## 🗂️ Folder Structure
@@ -53,8 +54,10 @@ FSLoRA/
 │   │   arg.py
 │   │   LoRA_sketching_llama_het.py
 │   │   evaluation_par.py
+│   │   evaluation_vllm.py
 │   │   models.py
 │   │   utils_data.py
+│   │   utils_data_wang.py
 │   │   utils_train.py
 │   │   main.py
 │   │   run_main.sh
@@ -63,6 +66,7 @@ FSLoRA/
   - `main_slora_glue_het.py`: Our FSLoRA framework for GLUE.
   - `models.py`: Includes building model.
   - `utils_data.py`: Data preprocessing.
+  - `utils_data_wang.py`: Data preprocessing for Dolly, Apalca, and Widz.
   - `run_main.sh`: Passing args and call `main_slora_glue_het.py`.
 
 - **`Commensen_reasoning/`**: Contains the primary codebase for LLaMA-3.2-3B on the Commensense Reasoning benchmark.
