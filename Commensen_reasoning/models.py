@@ -25,7 +25,7 @@ def build_model(base_model):
     model = prepare_model_for_kbit_training(model)
     return model
 
-def add_adapter(model, r, alpha, target_modules=["q_proj", "k_proj", "v_proj", "up_proj", "down_proj"]):
+def add_adapter(model, r, alpha, target_modules=["q_proj", "k_proj", "v_proj", "up_proj", "down_proj"]): # ["q_proj", "v_proj"] comparison with FLoRA
     config = LoraConfig(
             r=r,
             lora_alpha=alpha,
