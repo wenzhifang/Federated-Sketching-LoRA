@@ -17,7 +17,6 @@ from huggingface_hub import login
 login("")
 
 tokenizer = AutoTokenizer.from_pretrained(base_model, token = True )
-#tokenizer = AutoTokenizer.from_pretrained(base_model, token = True)
 tokenizer.pad_token_id = 0
 tokenizer.padding_side = "left"
 def tokenize(prompt, cutoff_len):
